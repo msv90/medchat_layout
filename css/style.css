@@ -1,0 +1,81 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* COMMON */
+.header{
+    margin: 1rem 0;
+}
+
+.header .system-logo img{
+
+}
+
+.header .section-title h1{
+    font-size: 3rem;
+}
+
+.navbar-main{
+    background-color: #e9ecef;
+}
+
+.navbar-main .navbar-user-info span{
+    margin-left: 1rem;
+}
+
+.navbar-dispatcher .container{
+    justify-content: flex-end;
+}
+
+.content{
+    padding: 2rem 0;
+}
+
+.footer{
+    padding: 1rem 0;
+    background-color: #e9ecef;
+}
+
+/* LIST DISPATCHER PAGE */
+.filter-item{
+    max-height: 230px;
+    overflow-y: scroll;
+    margin-bottom: 1rem;
+}
+
+.filter-item .title{
+    font-weight: bold;
+}
+
+.filter-item .form-group{
+    margin-bottom: 0.15rem;
+}
+
+.filters-list .form-group .btn-submit{
+    width: 100%;
+}
+
+.create-incident button{
+    width: 100%;
+}
+
+.table-incidents th a{
+    color: inherit;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* INCIDENT PAGE */
