@@ -7,54 +7,155 @@
         <meta charset="UTF-8">
 
         <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
         <link rel="stylesheet" href="css/style.css">
 
-        <title>MedChat - Incident page</title>
+        <title>MedChat - List dispatcher page</title>
 
     </head>
 
     <body>
 
-        <!-- HEADER -->
-        <div class="header">
-            <div class="container">
-                <div class="row">
+    <!-- HEADER -->
+    <div class="header">
+        <div class="container">
+            <div class="row">
 
-                    <div class="col-3 system-logo">
-                        <img src="https://via.placeholder.com/150" class="rounded-circle" alt="">
-                    </div>
-
-                    <div class="col-9 d-flex align-items-center justify-content-center section-title">
-                        <h1 class="align-bottom">Инцидент №2231</h1>
-                    </div>
-
+                <div class="col-3 system-logo">
+                    <img src="https://via.placeholder.com/150" class="rounded-circle" alt="">
                 </div>
+
+                <div class="col-9 d-flex align-items-center justify-content-center system-title">
+                    <h1 class="align-bottom">Инцидент №2231</h1>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-main navbar-dispatcher">
+        <div class="container">
+
+            <div class="navbar-user-info">
+                <img src="https://via.placeholder.com/50" class="rounded-circle" alt="">
+                <span class="navbar-text">
+                        Иван Петров
+                    </span>
+                <span class="navbar-text">
+                        <a href="javascript:void(0)">Выйти</a>
+                    </span>
             </div>
 
         </div>
+    </nav>
 
-        <!-- NAVBAR -->
-        <nav class="navbar navbar-main navbar-dispatcher">
-            <div class="container">
+    <!-- CONTENT -->
+    <div class="content">
+        <!-- SINGLE INCIDENT -->
+        <div class="container single-incident">
+            <form action="" class="single-incident-form">
 
-                <div class="navbar-user-info">
-                    <img src="https://via.placeholder.com/50" class="rounded-circle" alt="">
-                    <span class="navbar-text">
-                        Иван Петров
-                    </span>
-                    <span class="navbar-text">
-                        <a href="javascript:void(0)">Выйти</a>
-                    </span>
+                <!-- SINGLE INCIDENT, COMMON INFO -->
+                <div class="row common-info">
+                    <div class="col-2">
+                        <span>ID</span> 2231
+                    </div>
+                    <div class="col-3">
+                        <span>Создан</span> 25.11.2019 17:03:27
+                    </div>
+                    <div class="col-4">
+                        <span>Последнее изменение</span> 25.11.2019 18:55:11
+                    </div>
                 </div>
 
+                <!-- SINGLE INCIDENT, STATUS -->
+                <div class="row status">
+                    <div class="col-12">
+                        <span>Статус</span>
+                        <input type="radio"> Новый
+                        <input type="radio" checked> Наблюдение
+                        <input type="radio"> Выезд в стационар
+                        <input type="radio"> Перевод в ЛОКЮ
+                        <input type="radio"> Закрыт
+                    </div>
+                </div>
+
+                <!-- SINGLE INCIDENT, DETAILED INFO -->
+                <div class="row detailed-info">
+
+                        <div class="col-6">
+
+                            <div class="card">
+                                <div class="card-header">
+                                    Пациент
+                                </div>
+                                <div class="card-body">
+                                    <div class="form-group row">
+                                        <label class="col-3">№ истории</label>
+                                        <div class="col-9">
+                                            <input type="text" class="form-control" value="123-123456">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-3">ФИО</label>
+                                        <div class="col-9">
+                                            <input type="text" class="form-control" value="Болячкин П.В.">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-3">Возраст</label>
+                                        <div class="col-9">
+                                            <input type="number" class="form-control" value="55" min="0">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-3">Пол</label>
+                                        <div class="col-9 radio-buttons">
+                                            <input type="radio" checked> Мужской
+                                            <input type="radio"> Женский
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-3">Диагноз</label>
+                                        <div class="col-9">
+                                            <input type="text" class="form-control" value="Растяжение связок">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-3">ФИО</label>
+                                        <div class="col-9">
+                                            <textarea class="form-control" cols="30" rows="10">Перелом лучевой кости со смещением и разрывом сосудов. Возможен вывих и разрыв суставной сумки. Пациент также жалуется на боли в спине и нарушение зрения.</textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="row d-flex justify-content-end">
+                <div class="col-3 text-right">
+                    MedChat
+                </div>
             </div>
-        </nav>
+        </div>
+    </div>
 
-
-        <script src="js/jquery-3.4.1.min.js"></script>
-        <script src="js/popper.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/script.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
 
     </body>
 

@@ -65,17 +65,45 @@
     color: inherit;
 }
 
+/* SINGLE INCIDENT PAGE */
+.single-incident .row{
+    margin-bottom: 1rem;
+}
 
+.single-incident .row:last-child{
+    margin-bottom: 0;
+}
 
+.single-incident span{
+    font-weight: bold;
+}
 
+.single-incident .status input[type="radio"],
+.single-incident .status button{
+    margin-left: 2rem;
+}
 
+.single-incident .card-header{
+    font-weight: bold;
+}
 
+.single-incident .card-body label{
+    font-weight: bold;
+    line-height: 2rem;
+}
 
+.single-incident .card-body .radio-buttons{
+    margin-top: .5rem;
+}
 
+.single-incident .card-body input[type="radio"]{
+    margin-left: 2rem;
+}
 
+.single-incident .card-body input[type="radio"]:first-child{
+    margin-left: 0;
+}
 
-
-
-
-
-/* INCIDENT PAGE */
+.single-incident .card-body textarea{
+    resize: none;
+}
