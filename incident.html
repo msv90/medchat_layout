@@ -34,8 +34,6 @@
 
     </div>
 
-
-
     <!-- NAVBAR -->
     <nav class="navbar navbar-main navbar-dispatcher">
         <div class="container">
@@ -74,79 +72,365 @@
 
                 <!-- SINGLE INCIDENT, STATUS -->
                 <div class="row status">
-                    <div class="col-12">
+                    <div class="col-9 radio-buttons">
                         <span>Статус</span>
                         <input type="radio"> Новый
                         <input type="radio" checked> Наблюдение
                         <input type="radio"> Выезд в стационар
-                        <input type="radio"> Перевод в ЛОКЮ
+                        <input type="radio"> Перевод в ЛОКБ
                         <input type="radio"> Закрыт
+                    </div>
+                    <div class="col-3">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-remind">Добавить напоминание</button>
                     </div>
                 </div>
 
                 <!-- SINGLE INCIDENT, DETAILED INFO -->
                 <div class="row detailed-info">
 
-                        <div class="col-6">
+                    <div class="col-6">
 
-                            <div class="card">
-                                <div class="card-header">
-                                    Пациент
+                        <div class="card">
+                            <div class="card-header">
+                                Пациент
+                            </div>
+                            <div class="card-body">
+                                <div class="form-group row">
+                                    <label class="col-4">№ истории</label>
+                                    <div class="col-8">
+                                        <input type="text" class="form-control" value="123-123456">
+                                    </div>
                                 </div>
-                                <div class="card-body">
-                                    <div class="form-group row">
-                                        <label class="col-3">№ истории</label>
-                                        <div class="col-9">
-                                            <input type="text" class="form-control" value="123-123456">
-                                        </div>
+                                <div class="form-group row">
+                                    <label class="col-4">ФИО</label>
+                                    <div class="col-8">
+                                        <input type="text" class="form-control" value="Болячкин П.В.">
                                     </div>
-                                    <div class="form-group row">
-                                        <label class="col-3">ФИО</label>
-                                        <div class="col-9">
-                                            <input type="text" class="form-control" value="Болячкин П.В.">
-                                        </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-4">Возраст</label>
+                                    <div class="col-8">
+                                        <input type="number" class="form-control" value="55" min="0">
                                     </div>
-                                    <div class="form-group row">
-                                        <label class="col-3">Возраст</label>
-                                        <div class="col-9">
-                                            <input type="number" class="form-control" value="55" min="0">
-                                        </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-4">Пол</label>
+                                    <div class="col-8 radio-buttons">
+                                        <input type="radio" checked> Мужской
+                                        <input type="radio"> Женский
                                     </div>
-                                    <div class="form-group row">
-                                        <label class="col-3">Пол</label>
-                                        <div class="col-9 radio-buttons">
-                                            <input type="radio" checked> Мужской
-                                            <input type="radio"> Женский
-                                        </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-4">Диагноз</label>
+                                    <div class="col-8">
+                                        <input type="text" class="form-control" value="Растяжение связок">
                                     </div>
-                                    <div class="form-group row">
-                                        <label class="col-3">Диагноз</label>
-                                        <div class="col-9">
-                                            <input type="text" class="form-control" value="Растяжение связок">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-3">ФИО</label>
-                                        <div class="col-9">
-                                            <textarea class="form-control" cols="30" rows="10">Перелом лучевой кости со смещением и разрывом сосудов. Возможен вывих и разрыв суставной сумки. Пациент также жалуется на боли в спине и нарушение зрения.</textarea>
-                                        </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-4">ФИО</label>
+                                    <div class="col-8">
+                                        <textarea class="form-control" cols="30" rows="10">Перелом лучевой кости со смещением и разрывом сосудов. Возможен вывих и разрыв суставной сумки. Пациент также жалуется на боли в спине и нарушение зрения.</textarea>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
 
+                        <div class="card">
+                            <div class="card-header">
+                                Оценка работы заявителя
+                            </div>
+                            <div class="card-body">
+                                <div class="form-group row">
+                                    <label class="col-4">
+                                        Дефектура
+                                    </label>
+                                    <div class="col-8">
+                                        <textarea class="form-control" cols="30" rows="10">Вначале неверно поставлен диагноз, но вовремя спохватились и обратились в ЛОКБ</textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-4">
+                                        Оценка
+                                    </label>
+                                    <div class="col-8">
+                                        <select class="form-control">
+                                            <option value="">5 - Отлично</option>
+                                            <option value="">4 - Хорошо</option>
+                                            <option value="">3 - Удовлетворительно</option>
+                                            <option value="">2 - Неудовлетворительно</option>
+                                            <option value="">1 - Пациент умер, пока врач ходил пить чай, бывает :(</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-4">
+                                        Результат
+                                    </label>
+                                    <div class="col-8">
+                                        <textarea class="form-control" cols="30" rows="10">Рекомендовано хирургическое лечение специалистом ЛОКБ</textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-4">
+                                        Комментарий
+                                    </label>
+                                    <div class="col-8">
+                                        <textarea class="form-control" cols="30" rows="10">Пациент - друг детства главврача</textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-6">
+
+                        <div class="card">
+                            <div class="card-header">
+                                Заявитель
+                            </div>
+                            <div class="card-body">
+                                <div class="form-group row">
+                                    <label class="col-4">
+                                        Больница
+                                    </label>
+                                    <div class="col-8">
+                                        <select class="form-control">
+                                            <option value="">Гатчинская ЦРБ</option>
+                                            <option value="">Адмиралтейская ЦРБ</option>
+                                            <option value="">Пушкинская ЦРБ</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-3">
+                                        Врач
+                                    </label>
+                                    <div class="col-4 radio-buttons">
+                                        <input type="radio"> из справочника
+                                    </div>
+                                    <div class="col-5">
+                                        <select class="form-control">
+                                            <option value="">Иванов И.И.</option>
+                                            <option value="">Петров И.И.</option>
+                                            <option value="">Сидоров И.И.</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-3"></label>
+                                    <div class="col-4 radio-buttons">
+                                        <input type="radio"> произвольно
+                                    </div>
+                                    <div class="col-5">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                Назначенные врачи-специалисты
+                            </div>
+                            <div class="card-body">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Гл.</th>
+                                            <th scope="col">Специальность</th>
+                                            <th scope="col">Врач</th>
+                                            <th scope="col">Удалить</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="radio" checked></td>
+                                            <td>Хирург</td>
+                                            <td>Иванов А.А.</td>
+                                            <td><a href="" class="delete-link">X</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio"></td>
+                                            <td>Ортопед</td>
+                                            <td>Петров А.А.</td>
+                                            <td><a href="" class="delete-link">X</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-add-specialist">Добавить врача</button>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                Выезд в больницу-заявитель (главного специалиста)
+                            </div>
+                            <div class="card-body">
+                                <div class="form-group row">
+                                    <label class="col-6">
+                                        Время вызова специалиста
+                                    </label>
+                                    <div class="col-6">
+                                        <input type="datetime-local" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-6">
+                                        Выезд в больницу-заявитель
+                                    </label>
+                                    <div class="col-6">
+                                        <input type="datetime-local" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-6">
+                                        Время фактического выезда
+                                    </label>
+                                    <div class="col-6">
+                                        <input type="datetime-local" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-6">
+                                        Время возвращения
+                                    </label>
+                                    <div class="col-6">
+                                        <input type="datetime-local" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-6">
+                                        Ожидаемое прибытие
+                                    </label>
+                                    <div class="col-6">
+                                        <input type="datetime-local" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-4">
+                                        Операция
+                                    </label>
+                                    <div class="col-8">
+                                        <textarea class="form-control" cols="30" rows="10">Аортокоронарное шунтирование</textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-4">
+                                        Консультация
+                                    </label>
+                                    <div class="col-8">
+                                        <textarea class="form-control" cols="30" rows="10">Рекомендации по восстановлению</textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary form-control">Сохранить</button>
+                    </div>
                 </div>
 
             </form>
         </div>
     </div>
 
+    <!-- FOOTER -->
     <div class="footer">
         <div class="container">
             <div class="row d-flex justify-content-end">
                 <div class="col-3 text-right">
                     MedChat
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL WINDOW ADD SPECIALIST -->
+    <div class="modal" tabindex="-1" role="dialog" id="modal-add-specialist">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Добавить специалиста</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row form-group">
+                        <label class="col-4">
+                            Специальность
+                        </label>
+                        <div class="col-8">
+                            <select class="form-control">
+                                <option value="">ЛОР</option>
+                                <option value="">Терапевт</option>
+                                <option value="">Эндокринолог</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="col-4">
+                            Врач
+                        </label>
+                        <div class="col-8">
+                            <select class="form-control">
+                                <option value="">Иванов И.И.</option>
+                                <option value="">Петров И.И.</option>
+                                <option value="">Сидоров И.И.</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                    <button type="button" class="btn btn-primary">Добавить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL WINDOW REMIND -->
+    <div class="modal" tabindex="-1" role="dialog" id="modal-remind">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Добавить напоминание</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row form-group">
+                        <label class="col-6">
+                            Через
+                        </label>
+                        <div class="col-3">
+                            <input type="number" class="form-control" min="0" placeholder="часов">
+                        </div>
+                        <div class="col-3">
+                            <input type="number" class="form-control" min="0" max="60" placeholder="минут">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <a href="javascript:void(0)">30 минут</a>
+                            <a href="javascript:void(0)">1 час</a>
+                            <a href="javascript:void(0)">2 часа</a>
+                            <a href="javascript:void(0)">5 часов</a>
+                            <a href="javascript:void(0)">24 часа</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                    <button type="button" class="btn btn-primary">Добавить</button>
+                    <button type="button" class="btn btn-primary">Сброс</button>
                 </div>
             </div>
         </div>

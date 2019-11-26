@@ -83,6 +83,14 @@
     margin-left: 2rem;
 }
 
+.single-incident .status .radio-buttons{
+    line-height: 2rem;
+}
+
+.single-incident .card{
+    margin-top: 2rem;
+}
+
 .single-incident .card-header{
     font-weight: bold;
 }
@@ -106,4 +114,13 @@
 
 .single-incident .card-body textarea{
     resize: none;
+}
+
+.single-incident .card-body .delete-link{
+    color: red;
+}
+
+.modal label{
+    font-weight: bold;
+    line-height: 2rem;
 }
