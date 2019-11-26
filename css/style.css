@@ -61,7 +61,67 @@
     width: 100%;
 }
 
+.table-wrapper{
+    max-width: 100%;
+    overflow-x: scroll;
+    margin-bottom: 1rem;
+}
+
+.table-incidents{
+
+}
+
+.table-incidents tbody th,
+.table-incidents tbody td{
+    min-width: 150px;
+}
+
 .table-incidents th a{
+    color: inherit;
+}
+
+/* LIST ADMIN PAGE */
+.navbar-admin{
+
+}
+
+.navbar-admin .container{
+    justify-content: space-between;
+}
+
+.navbar-admin .navbar-admin-info{
+    position: relative;
+}
+
+.navbar-admin .navbar-admin-info i{
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.navbar-admin .navbar-admin-menu{
+    background: #e9ecef;
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    z-index: 99;
+    padding: 1rem;
+    box-sizing: border-box;
+    width: 12rem;
+}
+
+.navbar-admin .navbar-admin-menu.hidden{
+    display: none;
+}
+
+.navbar-admin .navbar-admin-menu i{
+    font-size: 1rem;
+    width: 1.5rem;
+    text-align: center;
+    margin-right: .5rem;
+    cursor: none;
+}
+
+.navbar-admin .navbar-admin-menu a{
     color: inherit;
 }
 
