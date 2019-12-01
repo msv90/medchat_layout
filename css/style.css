@@ -118,7 +118,7 @@
     width: 1.5rem;
     text-align: center;
     margin-right: .5rem;
-    cursor: none;
+    cursor: auto;
 }
 
 .navbar-admin .navbar-admin-menu a{
@@ -183,4 +183,34 @@
 .modal label{
     font-weight: bold;
     line-height: 2rem;
+}
+
+/* PROFILE PAGE */
+.profile-form label {
+    font-weight: bold;
+    line-height: 2rem;
+}
+
+/* AUTH PAGE */
+.auth-page .container{
+    align-items: center;
+}
+
+.auth-page .auth-title{
+    margin-bottom: 5rem;
+}
+
+.auth-page .auth-form{
+    justify-content: center;
+}
+
+.auth-page .auth-form form{
+    background-color: #e9ecef;
+    padding: 2rem;
+    border-radius: 5%;
+}
+
+.auth-page .auth-form form h1,
+.auth-page .auth-form form img{
+    margin-bottom: 2rem;
 }
